@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Banner from "./components/Banner";
+import Cart from "./components/Cart";
 function App() {
   return (
-    <Banner/>
+      <div>
+        <Banner/>
+        <Cart/>
+      </div>
+
   );
 }
 
