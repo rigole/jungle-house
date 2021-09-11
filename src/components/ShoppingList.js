@@ -1,19 +1,30 @@
 import '../styles/ShoppingList.css'
-const plantList = [
-    'monstera',
-    'ficus lyrata',
-    'pothos argenté',
-    'yuca',
-    'palmier'
-]
+import { plantList } from "../data/plantList";
 
 function ShoppingList() {
+
+    const categories = plantList.reduce(
+        (acc, plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),[]
+    )
     return (
-        <ul>
-            {plantList.map((plant,index) => (
-                <li key={`${plant}-${index}`}> {plant}</li>
-            ))}
-        </ul>
+        <div>
+            <ul>
+                {
+                    categories.map((cat) => (
+                        <li key={cat}>{cat}</li>
+                    ))
+                }
+            </ul>
+            <ul className='lmj-plant-list'>
+                {plantList.map((plant) =>(
+                    <li>
+                        {plant.name}
+                        {plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
+                    </li>
+                ))}
+            </ul>
+        </div>
+
     )
 }
 export default ShoppingList
