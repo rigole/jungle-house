@@ -11,10 +11,11 @@ function Cart() {
             <button className='lmj-cart-toggle-button' onClick={() => setIsOpen(false)}>Fermer</button>
             <h2 className='lmj-cart'>Panier</h2>
             <div>
-                Monstera : {monsteraPrice}$
+                Monstera : {monsteraPrice} XAF
                 <button onClick={() => updateCart(cart + 1)}>Ajouter</button>
             </div>
-            <h3>Total : {monsteraPrice * cart}$</h3>
+            <h3>Total : {monsteraPrice * cart} XAF</h3>
+            <button onClick={() => updateCart(0)}>Vider le Panier</button>
         </div>
     ) : (
         <div className='lmj-cart-closed'>
