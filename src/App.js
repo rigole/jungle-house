@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Banner from "./components/Banner";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import ShoppingList from "./components/ShoppingList";
 import {useState} from "react";
 function App() {
@@ -16,7 +17,7 @@ function App() {
               <Cart cart={cart} updateCart={updateCart}/>
               <ShoppingList cart={cart} updateCart={updateCart}/>
           </div>
-
+         <Footer/>
       </div>
 
   );

@@ -1,5 +1,6 @@
 import '../styles/ShoppingList.css'
 import { plantList } from "../data/plantList";
+import PlantItem from "./PlantItem";
 
 function ShoppingList({ cart, updateCart}) {
 
